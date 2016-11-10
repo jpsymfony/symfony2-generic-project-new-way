@@ -1,0 +1,45 @@
+{
+  "simulation": "jpsymfony.performance.Home",
+  "simulationId": "home",
+  "start": 1474815546809,
+  "description": "",
+  "scenarios": ["home - 1.0 users per second on prod"],
+  "assertions": [
+{
+  "path": "Global",
+  "target": "min of response time",
+  "condition": "is greater than",
+  "conditionValues": [10],
+  "result": true,
+  "message": "Global: min of response time is greater than 10",
+  "values": [1165]
+},
+{
+  "path": "Global",
+  "target": "mean of response time",
+  "condition": "is less than",
+  "conditionValues": [5000],
+  "result": false,
+  "message": "Global: mean of response time is less than 5000",
+  "values": [6230]
+},
+{
+  "path": "Global",
+  "target": "max of response time",
+  "condition": "is less than",
+  "conditionValues": [30000],
+  "result": true,
+  "message": "Global: max of response time is less than 30000",
+  "values": [9311]
+},
+{
+  "path": "Global",
+  "target": "percentage of failed requests",
+  "condition": "is",
+  "conditionValues": [0],
+  "result": true,
+  "message": "Global: percentage of failed requests is 0",
+  "values": [0]
+}
+  ]
+}

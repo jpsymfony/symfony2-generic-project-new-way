@@ -1,0 +1,14 @@
+<testsuite name="jpsymfony.performance.Home" tests="4" errors="0" failures="1" time="0">
+<testcase name="Global: min of response time is greater than 10" status="true" time="0">
+  <system-out>Global: min of response time is greater than 10</system-out>
+</testcase>
+<testcase name="Global: mean of response time is less than 5000" status="false" time="0">
+  <failure type="Global">Actual values: 6230</failure>
+</testcase>
+<testcase name="Global: max of response time is less than 30000" status="true" time="0">
+  <system-out>Global: max of response time is less than 30000</system-out>
+</testcase>
+<testcase name="Global: percentage of failed requests is 0" status="true" time="0">
+  <system-out>Global: percentage of failed requests is 0</system-out>
+</testcase>
+</testsuite>

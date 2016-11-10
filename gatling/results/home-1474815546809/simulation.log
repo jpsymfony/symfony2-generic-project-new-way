@@ -1,0 +1,45 @@
+ASSERTION	AAMDAAEDAgAK
+ASSERTION	AAMDAAECBQCgE4g=
+ASSERTION	AAMDAAEBBQCgdTA=
+ASSERTION	AAMBAAIDBAAA
+RUN	jpsymfony.performance.Home		home	1474815546809	 	2.0
+USER	home - 1.0 users per second on prod	1	START	1474815547718	1474815547718
+USER	home - 1.0 users per second on prod	2	START	1474815548808	1474815548808
+REQUEST	home - 1.0 users per second on prod	1		arrivée sur le site	1474815547756	1474815548921	OK	 
+USER	home - 1.0 users per second on prod	3	START	1474815549810	1474815549810
+USER	home - 1.0 users per second on prod	4	START	1474815550728	1474815550728
+REQUEST	home - 1.0 users per second on prod	2		arrivée sur le site	1474815548809	1474815551090	OK	 
+USER	home - 1.0 users per second on prod	5	START	1474815551730	1474815551730
+REQUEST	home - 1.0 users per second on prod	1		arrivée sur le site Redirect 1	1474815548947	1474815552105	OK	 
+USER	home - 1.0 users per second on prod	1	END	1474815547718	1474815552122
+USER	home - 1.0 users per second on prod	6	START	1474815552728	1474815552728
+REQUEST	home - 1.0 users per second on prod	3		arrivée sur le site	1474815549810	1474815552848	OK	 
+USER	home - 1.0 users per second on prod	7	START	1474815553730	1474815553730
+REQUEST	home - 1.0 users per second on prod	4		arrivée sur le site	1474815550728	1474815554387	OK	 
+USER	home - 1.0 users per second on prod	8	START	1474815554730	1474815554730
+REQUEST	home - 1.0 users per second on prod	2		arrivée sur le site Redirect 1	1474815551091	1474815555393	OK	 
+USER	home - 1.0 users per second on prod	2	END	1474815548808	1474815555394
+USER	home - 1.0 users per second on prod	9	START	1474815555728	1474815555728
+REQUEST	home - 1.0 users per second on prod	5		arrivée sur le site	1474815551731	1474815556640	OK	 
+USER	home - 1.0 users per second on prod	10	START	1474815556728	1474815556728
+REQUEST	home - 1.0 users per second on prod	3		arrivée sur le site Redirect 1	1474815552849	1474815558363	OK	 
+USER	home - 1.0 users per second on prod	3	END	1474815549810	1474815558364
+REQUEST	home - 1.0 users per second on prod	6		arrivée sur le site	1474815552728	1474815558575	OK	 
+REQUEST	home - 1.0 users per second on prod	7		arrivée sur le site	1474815553730	1474815560380	OK	 
+REQUEST	home - 1.0 users per second on prod	4		arrivée sur le site Redirect 1	1474815554388	1474815561589	OK	 
+USER	home - 1.0 users per second on prod	4	END	1474815550728	1474815561591
+REQUEST	home - 1.0 users per second on prod	8		arrivée sur le site	1474815554731	1474815562477	OK	 
+REQUEST	home - 1.0 users per second on prod	9		arrivée sur le site	1474815555729	1474815563888	OK	 
+REQUEST	home - 1.0 users per second on prod	5		arrivée sur le site Redirect 1	1474815556641	1474815565268	OK	 
+USER	home - 1.0 users per second on prod	5	END	1474815551730	1474815565269
+REQUEST	home - 1.0 users per second on prod	10		arrivée sur le site	1474815556729	1474815565843	OK	 
+REQUEST	home - 1.0 users per second on prod	6		arrivée sur le site Redirect 1	1474815558577	1474815567888	OK	 
+USER	home - 1.0 users per second on prod	6	END	1474815552728	1474815567889
+REQUEST	home - 1.0 users per second on prod	7		arrivée sur le site Redirect 1	1474815560381	1474815568564	OK	 
+USER	home - 1.0 users per second on prod	7	END	1474815553730	1474815568566
+REQUEST	home - 1.0 users per second on prod	8		arrivée sur le site Redirect 1	1474815562478	1474815571591	OK	 
+USER	home - 1.0 users per second on prod	8	END	1474815554730	1474815571592
+REQUEST	home - 1.0 users per second on prod	9		arrivée sur le site Redirect 1	1474815563889	1474815572802	OK	 
+USER	home - 1.0 users per second on prod	9	END	1474815555728	1474815572803
+REQUEST	home - 1.0 users per second on prod	10		arrivée sur le site Redirect 1	1474815565843	1474815573560	OK	 
+USER	home - 1.0 users per second on prod	10	END	1474815556728	1474815573561
