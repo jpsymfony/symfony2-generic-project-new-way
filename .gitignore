@@ -12,5 +12,5 @@
 !app/logs/.gitkeep
 /app/phpunit.xml
 .idea
-web/upload
+web/uploads
 web/media
