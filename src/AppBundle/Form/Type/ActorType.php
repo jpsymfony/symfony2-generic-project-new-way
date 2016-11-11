@@ -2,7 +2,7 @@
 
 namespace AppBundle\Form\Type;
 
-use App\CoreBundle\Form\DataTransformer\TextToDateTimeDataTransformer;
+use Jpsymfony\CoreBundle\Form\DataTransformer\TextToDateTimeDataTransformer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;

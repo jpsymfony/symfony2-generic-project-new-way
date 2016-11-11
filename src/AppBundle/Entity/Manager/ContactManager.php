@@ -1,7 +1,7 @@
 <?php
 namespace AppBundle\Entity\Manager;
 
-use App\CoreBundle\Services\Interfaces\MailerServiceInterface;
+use Jpsymfony\CoreBundle\Services\Interfaces\MailerServiceInterface;
 use AppBundle\Entity\Contact;
 use AppBundle\Entity\Manager\Interfaces\ContactManagerInterface;
 use AppBundle\Entity\Manager\Interfaces\ManagerInterface;

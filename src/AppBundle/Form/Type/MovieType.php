@@ -2,7 +2,7 @@
 
 namespace AppBundle\Form\Type;
 
-use App\CoreBundle\Form\DataTransformer\TextToDateTimeDataTransformer;
+use Jpsymfony\CoreBundle\Form\DataTransformer\TextToDateTimeDataTransformer;
 use AppBundle\Entity\Manager\Interfaces\MovieManagerInterface;
 use AppBundle\Entity\Movie;
 use Symfony\Component\Form\AbstractType;

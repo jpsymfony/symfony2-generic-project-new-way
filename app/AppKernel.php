@@ -24,7 +24,7 @@ class AppKernel extends Kernel
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
 
             new AppBundle\AppBundle(),
-            new App\CoreBundle\AppCoreBundle(),
+            new Jpsymfony\CoreBundle\JpsymfonyCoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

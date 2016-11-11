@@ -2,7 +2,7 @@
 
 namespace AppBundle\Entity\Manager\Interfaces;
 
-use App\CoreBundle\Entity\Manager\Interfaces\GenericManagerInterface;
+use Jpsymfony\CoreBundle\Entity\Manager\Interfaces\GenericManagerInterface;
 use AppBundle\Entity\Interfaces\UserInterface;
 
 interface UserManagerInterface extends GenericManagerInterface

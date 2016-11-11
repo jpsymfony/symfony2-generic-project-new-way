@@ -7,7 +7,7 @@
     <services>
         <service id="app.user_send_confirmation_mail_listener"
                  class="AppBundle\EventListener\SendConfirmationMailListener">
-            <argument type="service" id="app_core.mailer_service"/>
+            <argument type="service" id="jpsymfony.mailer_service"/>
             <argument type="service" id="twig" />
             <argument>AppUserBundle:Mail:confirmation_mail.html.twig</argument>
             <argument>%email_from%</argument>
@@ -16,7 +16,7 @@
 
         <service id="app.user_send_request_password_mail_listener"
                  class="AppBundle\EventListener\SendRequestPasswordMailListener">
-            <argument type="service" id="app_core.mailer_service"/>
+            <argument type="service" id="jpsymfony.mailer_service"/>
             <argument type="service" id="twig" />
             <argument type="service" id="router" />
             <argument type="service" id="security.csrf.token_generator" />
@@ -38,7 +38,7 @@
             <argument type="service" id="security.authorization_checker"/>
             <argument type="service" id="security.token_storage"/>
             <argument type="service" id="router"/>
-            <argument type="service" id="app_core.entity_management_guesser"/>
+            <argument type="service" id="jpsymfony.entity_management_guesser"/>
             <tag name="kernel.event_listener" event="kernel.controller" method="onKernelController" />
         </service>
     </services>

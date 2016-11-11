@@ -2,7 +2,7 @@
 
 namespace AppBundle\Repository;
 
-use App\CoreBundle\Repository\AbstractGenericRepository;
+use Jpsymfony\CoreBundle\Repository\AbstractGenericRepository;
 use AppBundle\Repository\Interfaces\UserRepositoryInterface;
 use Doctrine\ORM\QueryBuilder;
 
