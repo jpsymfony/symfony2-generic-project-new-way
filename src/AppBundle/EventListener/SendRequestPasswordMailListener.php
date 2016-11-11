@@ -2,7 +2,7 @@
 
 namespace AppBundle\EventListener;
 
-use App\CoreBundle\Services\Interfaces\MailerServiceInterface;
+use Jpsymfony\CoreBundle\Services\Interfaces\MailerServiceInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Twig_Environment;
 use Symfony\Component\Routing\RouterInterface;

@@ -6,7 +6,7 @@ use AppBundle\Entity\Manager\Interfaces\UserManagerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use App\CoreBundle\Entity\Manager\AbstractGenericManager;
+use Jpsymfony\CoreBundle\Entity\Manager\AbstractGenericManager;
 use AppBundle\AppEvents;
 use AppBundle\Entity\Interfaces\UserInterface;
 use AppBundle\Event\UserDataEvent;

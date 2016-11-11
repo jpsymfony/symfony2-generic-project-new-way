@@ -2,8 +2,8 @@
 
 namespace AppBundle\Repository;
 
-use App\CoreBundle\Form\DataTransformer\DatedmYToDateYmdViewTransformer;
-use App\CoreBundle\Repository\AbstractGenericRepository;
+use Jpsymfony\CoreBundle\Form\DataTransformer\DatedmYToDateYmdViewTransformer;
+use Jpsymfony\CoreBundle\Repository\AbstractGenericRepository;
 use AppBundle\Entity\Movie;
 use AppBundle\Repository\Interfaces\MovieRepositoryInterface;
 

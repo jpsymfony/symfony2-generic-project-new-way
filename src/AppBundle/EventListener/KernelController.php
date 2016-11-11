@@ -2,7 +2,7 @@
 
 namespace AppBundle\EventListener;
 
-use App\CoreBundle\Services\EntityManagementGuesser;
+use Jpsymfony\CoreBundle\Services\EntityManagementGuesser;
 use AppBundle\Controller\ContactController;
 use Avalanche\Bundle\ImagineBundle\Controller\ImagineController;
 use Symfony\Bundle\AsseticBundle\Controller\AsseticController;

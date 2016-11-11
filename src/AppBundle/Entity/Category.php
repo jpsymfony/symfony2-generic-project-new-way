@@ -6,12 +6,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 
-use App\CoreBundle\Traits\Entity\TraitDatetime;
-use App\CoreBundle\Traits\Entity\TraitSimple;
-use App\CoreBundle\Traits\Entity\TraitEnabled;
-use App\CoreBundle\Traits\Entity\Interfaces\TraitDatetimeInterface;
-use App\CoreBundle\Traits\Entity\Interfaces\TraitSimpleInterface;
-use App\CoreBundle\Traits\Entity\Interfaces\TraitEnabledInterface;
+use Jpsymfony\CoreBundle\Traits\Entity\TraitDatetime;
+use Jpsymfony\CoreBundle\Traits\Entity\TraitSimple;
+use Jpsymfony\CoreBundle\Traits\Entity\TraitEnabled;
+use Jpsymfony\CoreBundle\Traits\Entity\Interfaces\TraitDatetimeInterface;
+use Jpsymfony\CoreBundle\Traits\Entity\Interfaces\TraitSimpleInterface;
+use Jpsymfony\CoreBundle\Traits\Entity\Interfaces\TraitEnabledInterface;
 
 /**
  * Category

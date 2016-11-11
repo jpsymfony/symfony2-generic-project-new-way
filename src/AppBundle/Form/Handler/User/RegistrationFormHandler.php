@@ -4,7 +4,7 @@ namespace AppBundle\Form\Handler\User;
 
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
-use App\CoreBundle\Form\Handler\FormHandlerInterface;
+use Jpsymfony\CoreBundle\Form\Handler\FormHandlerInterface;
 use AppBundle\Entity\Manager\Interfaces\UserManagerInterface;
 
 class RegistrationFormHandler implements FormHandlerInterface

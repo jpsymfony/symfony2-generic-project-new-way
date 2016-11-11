@@ -1,7 +1,7 @@
 <?php
 namespace AppBundle\Entity\Manager\Interfaces;
 
-use App\CoreBundle\Entity\Manager\Interfaces\GenericManagerInterface;
+use Jpsymfony\CoreBundle\Entity\Manager\Interfaces\GenericManagerInterface;
 use AppBundle\Entity\Movie;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Form\FormInterface;

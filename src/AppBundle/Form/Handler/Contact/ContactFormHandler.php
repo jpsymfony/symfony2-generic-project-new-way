@@ -3,7 +3,7 @@ namespace AppBundle\Form\Handler\Contact;
 
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
-use App\CoreBundle\Form\Handler\FormHandlerInterface;
+use Jpsymfony\CoreBundle\Form\Handler\FormHandlerInterface;
 use AppBundle\Entity\Manager\Interfaces\ContactManagerInterface;
 
 class ContactFormHandler implements FormHandlerInterface

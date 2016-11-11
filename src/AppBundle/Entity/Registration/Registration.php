@@ -3,7 +3,7 @@
 namespace AppBundle\Entity\Registration;
 
 use Symfony\Component\Validator\Constraints as Assert;
-use App\CoreBundle\Validator\Constraints as CoreAssert;
+use Jpsymfony\CoreBundle\Validator\Constraints as CoreAssert;
 use AppBundle\Validator\Constraints as AppAssert;
 use AppBundle\Entity\User;
 

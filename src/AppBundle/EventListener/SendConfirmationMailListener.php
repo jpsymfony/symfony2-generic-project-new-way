@@ -2,7 +2,7 @@
 
 namespace AppBundle\EventListener;
 
-use App\CoreBundle\Services\Interfaces\MailerServiceInterface;
+use Jpsymfony\CoreBundle\Services\Interfaces\MailerServiceInterface;
 use AppBundle\Event\UserDataEvent;
 
 class SendConfirmationMailListener

@@ -36,7 +36,7 @@ class ChangePasswordController extends Controller
     }
 
     /**
-     * @return \App\CoreBundle\Form\Handler\FormHandlerInterface
+     * @return \Jpsymfony\CoreBundle\Form\Handler\FormHandlerInterface
      */
     protected function getChangePasswordFormHandler()
     {

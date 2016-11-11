@@ -8,7 +8,7 @@
         <service id="app.user_repository"
                  class="AppBundle\Repository\UserRepository" lazy="true">
                 <factory service="doctrine.orm.default_entity_manager" method="getRepository" />
-                <argument>App\UserBundle\Entity\User</argument>
+                <argument>AppBundle\Entity\User</argument>
         </service>
     </services>
 </container>
