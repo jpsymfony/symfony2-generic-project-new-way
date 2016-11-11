@@ -48,7 +48,7 @@ $("#form_recherche").submit(function (e) {
     });
 });
 
-$("#app_portal_actor_birthday").datepicker({
+$("#app_actor_birthday").datepicker({
     changeMonth: true,
     changeYear: true,
     showButtonPanel: true,
@@ -59,9 +59,9 @@ $("#app_portal_actor_birthday").datepicker({
     }
 });
 
-$("#app_portal_movie_releasedAt").datepicker({dateFormat: 'dd/mm/yy'});
+$("#app_movie_releasedAt").datepicker({dateFormat: 'dd/mm/yy'});
 
-$('#app_portal_movie_filter_releaseDateFrom').datepicker( {
+$('#app_movie_filter_releaseDateFrom').datepicker( {
     changeMonth: true,
     changeYear: true,
     showButtonPanel: true,
@@ -72,7 +72,7 @@ $('#app_portal_movie_filter_releaseDateFrom').datepicker( {
     }
 });
 
-$('#app_portal_movie_filter_releaseDateTo').datepicker({
+$('#app_movie_filter_releaseDateTo').datepicker({
     changeMonth: true,
     changeYear: true,
     showButtonPanel: true,
@@ -83,23 +83,23 @@ $('#app_portal_movie_filter_releaseDateTo').datepicker({
     }
 });
 
-$('#app_portal_contacttype_other').hide();
+$('#app_contacttype_other').hide();
 
-if ($("input[name='app_portal_contacttype[knowledge]']:checked").val() == 'autre') {
-    $('#app_portal_contacttype_other').show();
+if ($("input[name='app_contacttype[knowledge]']:checked").val() == 'autre') {
+    $('#app_contacttype_other').show();
 } else {
-    $('#app_portal_contacttype_other').hide();
+    $('#app_contacttype_other').hide();
 }
 
-$("input[name='app_portal_contacttype[knowledge]']").click(function () {
+$("input[name='app_contacttype[knowledge]']").click(function () {
     if ($(this).val() == 'autre') {
-        $('#app_portal_contacttype_other').fadeIn();
+        $('#app_contacttype_other').fadeIn();
     } else {
-        $('#app_portal_contacttype_other').fadeOut();
+        $('#app_contacttype_other').fadeOut();
     }
 });
 
-$('#app_portal_movie_filter_actors').multiselect(
+$('#app_movie_filter_actors').multiselect(
     {
         buttonWidth: '200px',
         disableIfEmpty: true,
@@ -126,7 +126,7 @@ $('#app_portal_movie_filter_actors').multiselect(
         }
     }
 );
-$('#app_portal_movie_filter_hashTags').multiselect(
+$('#app_movie_filter_hashTags').multiselect(
     {
         buttonWidth: '200px',
         disableIfEmpty: true,

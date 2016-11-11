@@ -23,11 +23,8 @@ class AppKernel extends Kernel
             new Genemu\Bundle\FormBundle\GenemuFormBundle(),
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
 
-            new App\PortalBundle\AppPortalBundle(),
+            new AppBundle\AppBundle(),
             new App\CoreBundle\AppCoreBundle(),
-            new App\UserBundle\AppUserBundle(),
-            new \App\AdminBundle\AppAdminBundle(),
-            new \App\BackUserBundle\AppBackUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

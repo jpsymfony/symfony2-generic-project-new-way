@@ -3,6 +3,7 @@
 namespace App\CoreBundle\Converter;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Symfony\Component\DependencyInjection\Exception\BadMethodCallException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Doctrine\Common\Persistence\ManagerRegistry;
@@ -73,14 +74,20 @@ class CollectionConverter implements \Sensio\Bundle\FrameworkExtraBundle\Request
         try {
             $managerClassName = $options['manager'];
         } catch (\Exception $e) {
-            throw new NotFoundHttpException(sprintf('%s service manager option not found.', $managerClassName));
+            throw new \InvalidArgumentException(sprintf('%s service manager option empty.', $managerClassName));
         }
 
         try {
-            $result = $this->container->get($managerClassName)->all("object", $max, $orderby, $dir);
-            $collection = new ArrayCollection($result);
+            $manager = $this->container->get($managerClassName);
         } catch (\Exception $e) {
             throw new NotFoundHttpException(sprintf('%s service manager not found.', $managerClassName));
+        }
+
+        try {
+            $result = $manager->all("object", $max, $orderby, $dir);
+            $collection = new ArrayCollection($result);
+        } catch (\Exception $e) {
+            throw new BadMethodCallException(sprintf('%s service manager method all not found.', $managerClassName));
         }
         
         if (!($collection instanceof ArrayCollection)) {
