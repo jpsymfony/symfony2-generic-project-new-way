@@ -4,7 +4,7 @@ namespace AppBundle\EventListener;
 
 use Jpsymfony\CoreBundle\Services\EntityManagementGuesser;
 use AppBundle\Controller\ContactController;
-use Avalanche\Bundle\ImagineBundle\Controller\ImagineController;
+use Liip\ImagineBundle\Controller\ImagineController;
 use Symfony\Bundle\AsseticBundle\Controller\AsseticController;
 use Symfony\Bundle\FrameworkBundle\Controller\RedirectController;
 use Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController;

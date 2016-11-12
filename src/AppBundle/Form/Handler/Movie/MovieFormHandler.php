@@ -45,14 +45,23 @@ class MovieFormHandler
      */
     protected $movieManager;
 
+    /**
+     * @param MovieFormHandlerStrategy $nafhs
+     */
     public function setNewMovieFormHandlerStrategy(MovieFormHandlerStrategy $nafhs) {
         $this->newMovieFormHandlerStrategy = $nafhs;
     }
 
+    /**
+     * @param MovieFormHandlerStrategy $uafhs
+     */
     public function setUpdateMovieFormHandlerStrategy(MovieFormHandlerStrategy $uafhs) {
         $this->updateMovieFormHandlerStrategy = $uafhs;
     }
 
+    /**
+     * @param ManagerService $managerService
+     */
     public function setManagerService(ManagerService $managerService)
     {
         $this->managerService = $managerService;

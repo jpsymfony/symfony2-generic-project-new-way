@@ -1,4 +1,4 @@
-{% block hashtags_row %}
+{% block _movie_hashTags_row %}
     {{- form_label(form) -}}
     {% if prototype is defined %}
         {%- set attr = attr|merge({'data-prototype': form_row(prototype) }) -%}
@@ -25,10 +25,9 @@
         {{ block('form_rows') }}
         </tbody>
     </table>
+{% endblock %}
 
-{% endblock hashtags_row %}
-
-{% block app_hashtag_row %}
+{% block _movie_hashTags_entry_row %}
     <tr>
         <td>
             <button type="button" class="close remove-line" aria-label="Remove">
@@ -42,9 +41,9 @@
         </td>
         {{ form_widget(form) }}
     </tr>
-{% endblock app_hashtag_row %}
+{% endblock %}
 
-{% block app_image_row %}
+{% block _movie_image_row %}
     {{ form_errors(form) }}
     {{ form_widget(form) }}
     {% if form.vars.value.alt is defined and form.vars.value.alt is not null %}
@@ -52,10 +51,10 @@
             <label class="col-sm-2 control-label">{{ 'film.image' | trans }}</label>
             <div class="col-sm-10">
                 <img
-                    src="{{ asset(form.vars.value.getWebPath | apply_filter('movie_thumbnail')) }}"
+                    src="{{ asset(form.vars.value.getWebPath | imagine_filter('movie_thumbnail')) }}"
                     alt="{{ form.vars.value.alt }}"
                 />
             </div>
         </div>
     {% endif %}
-{% endblock app_image_row %}
+{% endblock %}

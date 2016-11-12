@@ -53,6 +53,10 @@ class NewActorFormHandlerStrategy extends AbstractActorFormHandlerStrategy
         $this->router = $router;
     }
 
+    /**
+     * @param Actor $actor
+     * @return \Symfony\Component\Form\Form|\Symfony\Component\Form\FormInterface
+     */
     public function createForm(Actor $actor)
     {
         $this->form = $this->formFactory->create(ActorType::class, $actor, array(
@@ -63,6 +67,11 @@ class NewActorFormHandlerStrategy extends AbstractActorFormHandlerStrategy
         return $this->form;
     }
 
+    /**
+     * @param Request $request
+     * @param Actor $actor
+     * @return string
+     */
     public function handleForm(Request $request, Actor $actor)
     {
         $this->actorManager->save($actor, true, true);

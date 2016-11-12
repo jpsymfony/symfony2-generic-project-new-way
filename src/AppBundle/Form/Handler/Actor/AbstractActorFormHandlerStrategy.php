@@ -14,13 +14,25 @@ abstract class AbstractActorFormHandlerStrategy implements ActorFormHandlerStrat
      */
     protected $form;
 
+    /**
+     * @return \Symfony\Component\Form\FormView
+     */
     public function createView()
     {
         return $this->form->createView();
     }
 
+    /**
+     * @param Request $request
+     * @param Actor $actor
+     * @return mixed
+     */
     abstract public function handleForm(Request $request, Actor $actor);
 
+    /**
+     * @param Actor $actor
+     * @return mixed
+     */
     abstract public function createForm(Actor $actor);
 
 

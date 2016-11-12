@@ -28,20 +28,20 @@
         <service id="form.type.change_password"
                  class="AppBundle\Form\Type\User\ChangePasswordType">
             <argument type="service" id="app.user_manager" />
-            <tag name="form.type" alias="change_password_form" />
+            <tag name="form.type" />
         </service>
         
         <service id="form.type.request_password"
                  class="AppBundle\Form\Type\User\RequestPasswordType">
             <argument type="service" id="app.user_manager" />
-            <tag name="form.type" alias="request_password_form" />
+            <tag name="form.type" />
         </service>
 
         <service id="form.type.reset_password"
                  class="AppBundle\Form\Type\User\ResetPasswordType" >
             <argument type="service" id="app.user_manager" />
             <argument type="service" id="request_stack" strict="false"/>
-            <tag name="form.type" alias="reset_password_form" />
+            <tag name="form.type" />
         </service>
     </services>
 </container>

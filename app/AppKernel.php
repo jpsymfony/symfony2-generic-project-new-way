@@ -20,7 +20,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
+            new Liip\ImagineBundle\LiipImagineBundle(),
 
             new AppBundle\AppBundle(),
             new Jpsymfony\CoreBundle\JpsymfonyCoreBundle(),

@@ -1,4 +1,4 @@
-{% block _app_contacttype_knowledge_row %}
+{% block _contact_knowledge_row %}
     {% spaceless %}
         <div class="form-group{% if not valid %} has-error{% endif %}">
             <div class="{{ block('form_label_class') }}"><strong>{{ 'contact.knowledge'|trans() }}</strong></div>
@@ -10,7 +10,7 @@
     {% endspaceless %}
 {% endblock %}
 
-{% block _app_contacttype_other_row %}
+{% block _contact_other_row %}
     <div class="form-group{% if (not compound or force_error|default(false)) and not valid %} has-error{% endif %}">
         <div class="{{ block('form_label_class') }}"></div>
         <div class="{{ block('form_group_class') }}">
