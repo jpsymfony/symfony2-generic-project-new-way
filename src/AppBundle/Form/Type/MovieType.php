@@ -111,11 +111,6 @@ class MovieType extends AbstractType
         );
     }
 
-    public function getName()
-    {
-        return 'app_movie';
-    }
-
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(

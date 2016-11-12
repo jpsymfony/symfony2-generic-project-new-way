@@ -33,7 +33,7 @@ $('.add_tag_link').click(function (e) {
 $("#form_recherche").submit(function (e) {
     e.preventDefault();
     $(".loading").show();
-    var motcle = $("#actor_search_motcle").val();
+    var motcle = $("#actor_search_form_motcle").val();
 
     var DATA = 'motcle=' + motcle;
     $.ajax({
@@ -48,7 +48,7 @@ $("#form_recherche").submit(function (e) {
     });
 });
 
-$("#app_actor_birthday").datepicker({
+$("#actor_birthday").datepicker({
     changeMonth: true,
     changeYear: true,
     showButtonPanel: true,
@@ -59,9 +59,9 @@ $("#app_actor_birthday").datepicker({
     }
 });
 
-$("#app_movie_releasedAt").datepicker({dateFormat: 'dd/mm/yy'});
+$("#movie_releasedAt").datepicker({dateFormat: 'dd/mm/yy'});
 
-$('#app_movie_filter_releaseDateFrom').datepicker( {
+$('#movie_filter_releaseDateFrom').datepicker( {
     changeMonth: true,
     changeYear: true,
     showButtonPanel: true,
@@ -72,7 +72,7 @@ $('#app_movie_filter_releaseDateFrom').datepicker( {
     }
 });
 
-$('#app_movie_filter_releaseDateTo').datepicker({
+$('#movie_filter_releaseDateTo').datepicker({
     changeMonth: true,
     changeYear: true,
     showButtonPanel: true,
@@ -83,22 +83,21 @@ $('#app_movie_filter_releaseDateTo').datepicker({
     }
 });
 
-$('#app_contacttype_other').hide();
+$('#contact_other').hide();
 
-if ($("input[name='app_contacttype[knowledge]']:checked").val() == 'autre') {
-    $('#app_contacttype_other').show();
+if ($("input[name='contact[knowledge]']:checked").val() == 'autre') {
+    $('#contact_other').show();
 } else {
-    $('#app_contacttype_other').hide();
+    $('#contact_other').hide();
 }
 
-$("input[name='app_contacttype[knowledge]']").click(function () {
+$("input[name='contact[knowledge]']").click(function () {
     if ($(this).val() == 'autre') {
-        $('#app_contacttype_other').fadeIn();
+        $('#contact_other').fadeIn();
     } else {
-        $('#app_contacttype_other').fadeOut();
+        $('#contact_other').fadeOut();
     }
 });
-
 
 function multiSelect(dom, emptyLabel, moreThanLabel) {
     $(dom).multiselect(
@@ -130,6 +129,6 @@ function multiSelect(dom, emptyLabel, moreThanLabel) {
     );
 }
 
-multiSelect('#app_movie_filter_actors', 'Tous les acteurs', 'Plus de 3 sélectionnés');
-multiSelect('#app_movie_actors', 'Tous les acteurs', 'Plus de 3 sélectionnés');
-multiSelect('#app_movie_filter_hashTags', 'Tous les hashtags', 'Plus de 3 sélectionnés');
+multiSelect('#movie_filter_actors', 'Tous les acteurs', 'Plus de 3 sélectionnés');
+multiSelect('#movie_actors', 'Tous les acteurs', 'Plus de 3 sélectionnés');
+multiSelect('#movie_filter_hashTags', 'Tous les hashtags', 'Plus de 3 sélectionnés');

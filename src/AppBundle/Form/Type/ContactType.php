@@ -23,14 +23,15 @@ class ContactType extends AbstractType
             ->add('additionnalInformation', TextareaType::class, array('label' => 'contact.additional_information'))
             ->add('knowledge', ChoiceType::class, array(
                 'choices'     => array(
-                    'internet'         => 'contact.internet.knowledge',
-                    'facebook'         => 'contact.facebook.knowledge',
-                    'pub_papier'       => 'contact.pubpapier.knowledge',
-                    'bouche_a_oreille' => 'contact.boucheaoreille.knowledge',
-                    'presse_ecrite'    => 'contact.newspaper.knowledge',
-                    'reseaux_sociaux'  => 'contact.network.knowledge',
-                    'autre'            => 'contact.autre.knowledge',
+                    'contact.internet.knowledge' => 'internet',
+                    'contact.facebook.knowledge' => 'facebook',
+                    'contact.pubpapier.knowledge' => 'pubpapier',
+                    'contact.boucheaoreille.knowledge' => 'boucheaoreille',
+                    'contact.newspaper.knowledge' => 'newspaper',
+                    'contact.network.knowledge' => 'network',
+                    'contact.autre.knowledge' => 'autre',
                 ),
+                'choices_as_values' => true,
                 'required' => false,
                 'expanded' => true,
                 'multiple' => false,
@@ -49,11 +50,6 @@ class ContactType extends AbstractType
             'data_class' => 'AppBundle\Entity\Contact',
             'csrf_protection' => false,
         ));
-    }
-
-    public function getName()
-    {
-        return 'app_contacttype';
     }
 
 }

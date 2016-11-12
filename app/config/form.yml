@@ -31,14 +31,14 @@ services:
     app.movie_search.form:
         class: AppBundle\Form\Type\MovieFilterType
         tags:
-            - { name: form.type, alias: app_movie_filter }
+            - { name: form.type }
 
-    app.movie.form.type:
+    app.movie.form:
         class: AppBundle\Form\Type\MovieType
         arguments:
             - "@app.movie.manager"
         tags:
-            - { name: form.type, alias: app_movie }
+            - { name: form.type }
 
 
     app.actor.form.handler:
@@ -66,26 +66,26 @@ services:
     app.actor_search.form:
             class: AppBundle\Form\Type\ActorSearchFormType
             tags:
-                - { name: form.type, alias: actor_search }
+                - { name: form.type }
 
 
     app.request_contact.handler:
         class: AppBundle\Form\Handler\Contact\ContactFormHandler
         arguments: ['@app.contact.manager']
 
-    app.contact.form.type:
+    app.contact.form:
             class: AppBundle\Form\Type\ContactType
             tags:
-                - { name: form.type, alias: app_contacttype }
+                - { name: form.type }
 
 
-    app.hashtag.form:
+    app.hashtag.collection.form:
         class: AppBundle\Form\Type\HashTagCollectionType
         arguments: ["%app.max_hashtag_limit%"]
         tags:
-            - { name: form.type, alias: hashtags }
+            - { name: form.type }
 
-    app.hashtag.form.type:
+    app.hashtag.form:
         class: AppBundle\Form\Type\HashTagType
         tags:
-            - { name: form.type, alias: app_hashtag }
+            - { name: form.type }

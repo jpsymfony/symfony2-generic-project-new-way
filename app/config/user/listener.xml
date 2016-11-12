@@ -9,7 +9,7 @@
                  class="AppBundle\EventListener\SendConfirmationMailListener">
             <argument type="service" id="jpsymfony.mailer_service"/>
             <argument type="service" id="twig" />
-            <argument>AppUserBundle:Mail:confirmation_mail.html.twig</argument>
+            <argument>mail/confirmation_mail.html.twig</argument>
             <argument>%email_from%</argument>
             <tag name="kernel.event_listener" event="app.new_account_created" method="onNewAccountCreated" />
         </service>
@@ -21,7 +21,7 @@
             <argument type="service" id="router" />
             <argument type="service" id="security.csrf.token_generator" />
             <argument type="service" id="app.user_manager" />
-            <argument>AppUserBundle:Mail:request_password_mail.html.twig</argument>
+            <argument>mail/request_password_mail.html.twig</argument>
             <argument>%email_from%</argument>
             <tag name="kernel.event_listener" event="app.new_password_requested" method="onRequestedPassword" />
         </service>

@@ -31,7 +31,8 @@ class ActorType extends AbstractType
                 ->addModelTransformer(new TextToDateTimeDataTransformer())
         )
         ->add('sex', ChoiceType::class, array(
-            'choices' => array('F'=>'Féminin', 'M'=>'Masculin'),
+            'choices' => array('Féminin'=>'F', 'Masculin'=>'M'),
+            'choices_as_values' => true,
             'label' => 'acteur.sexe'
             ))
 
@@ -39,11 +40,6 @@ class ActorType extends AbstractType
             'attr' => ['class' => 'btn btn-primary btn-lg btn-block'],
             'label' => 'valider'
         ));
-    }
-
-    public function getName()
-    {
-        return 'app_actor';
     }
     
     public function configureOptions(OptionsResolver $resolver)

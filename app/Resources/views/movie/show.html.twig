@@ -33,7 +33,7 @@
                         <th>{{ 'film.image'|trans }}</th>
                         <td>
                             <img
-                                src="{{ asset(movie.image.getWebPath | apply_filter('movie_thumbnail')) }}"
+                                src="{{ asset(movie.image.getWebPath | imagine_filter('movie_thumbnail')) }}"
                                 alt="{{ movie.image.alt }}"
                             />
                         </td>

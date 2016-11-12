@@ -39,7 +39,7 @@
         "guzzlehttp/guzzle": "^6.2",
         "ocramius/proxy-manager": "^1.0",
         "beberlei/DoctrineExtensions": "^1.0",
-        "avalanche123/imagine-bundle": "^2.1",
+        "liip/imagine-bundle": "^1.6",
         "jpsymfony/core-bundle": "1.0"
     },
     "require-dev": {

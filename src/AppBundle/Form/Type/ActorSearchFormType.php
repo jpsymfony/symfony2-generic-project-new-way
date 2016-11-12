@@ -19,9 +19,9 @@ class ActorSearchFormType extends AbstractType
                 ));
     }
     
-    public function getName()
+    public function getBlockPrefix()
     {
-        return 'actor_search';
+        return 'actor_search_form';
     }
 
     public function configureOptions(OptionsResolver $resolver)

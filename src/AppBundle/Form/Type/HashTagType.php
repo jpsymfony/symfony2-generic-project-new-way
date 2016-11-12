@@ -21,9 +21,4 @@ class HashTagType extends AbstractType
                 'data_class' => 'AppBundle\Entity\HashTag',
         ));
     }
-
-    public function getName()
-    {
-        return 'app_hashtag';
-    }
 }

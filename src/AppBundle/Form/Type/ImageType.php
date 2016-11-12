@@ -22,9 +22,4 @@ class ImageType extends AbstractType
             'data_class' => 'AppBundle\Entity\Image'
         ));
     }
-
-    public function getName()
-    {
-        return 'app_image';
-    }
 }

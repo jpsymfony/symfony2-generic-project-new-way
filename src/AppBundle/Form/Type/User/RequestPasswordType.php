@@ -70,9 +70,4 @@ class RequestPasswordType extends AbstractType
             'data_class' => 'AppBundle\Entity\Password\RequestPassword',
         ]);
     }
-
-    public function getName()
-    {
-        return 'request_password_form';
-    }
 }
