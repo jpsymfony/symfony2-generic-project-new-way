@@ -2,9 +2,11 @@
 
 namespace AppBundle\Form\Type;
 
+use Doctrine\ORM\EntityRepository;
 use Jpsymfony\CoreBundle\Form\DataTransformer\TextToDateTimeDataTransformer;
 use AppBundle\Entity\Manager\Interfaces\MovieManagerInterface;
 use AppBundle\Entity\Movie;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -50,30 +52,28 @@ class MovieType extends AbstractType
                     ->addModelTransformer(new TextToDateTimeDataTransformer())
             )
 
-            ->add('category', 'genemu_jqueryselect2_entity', array(
-                'class' => 'AppBundle\Entity\Category',
-                'property' => 'title',
-                'multiple' => false,
-                'required' => false,
-                'label' => 'film.categorie',
-                'configs' => array(
-                    // Whether or not multiple values are allowed (default to false)
-                    'multiple' => false
-                )
-            ))
-
-            ->add('actors', 'genemu_jqueryselect2_entity', array(
-                'class' => 'AppBundle\Entity\Actor',
-                'property' => 'firstNameLastName',
-                'expanded' => false,
-                'multiple' => true,
-                'required' => false,
-                'label' => 'film.acteurs',
-                'configs' => array(
-                    // Whether or not multiple values are allowed (default to false)
-                    'multiple' => true
-                )
-            ));
+	        ->add('category', EntityType::class, array(
+		        'class' => 'AppBundle\Entity\Category',
+		        'multiple' => false,
+		        'required' => false,
+		        'label' => 'film.categorie',
+		        'placeholder' => 'film.categories.toutes',
+		        'query_builder' => function (EntityRepository $er) {
+			        return $er->createQueryBuilder('c')
+			                  ->orderBy('c.title', 'ASC');
+		        },
+	        ))
+	        ->add('actors', EntityType::class, array(
+		        'class' => 'AppBundle\Entity\Actor',
+		        'multiple' => true,
+		        'required' => false,
+		        'label' => 'film.acteurs',
+		        'placeholder' => 'film.acteurs.tous',
+		        'query_builder' => function (EntityRepository $er) {
+			        return $er->createQueryBuilder('a')
+			                  ->orderBy('a.lastName', 'ASC');
+		        },
+	        ));
 
         if (!empty($options) && isset($options['hashtags_hidden']) && !$options['hashtags_hidden']) {
             $builder->add('hashTags', HashTagCollectionType::class);

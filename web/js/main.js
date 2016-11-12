@@ -99,57 +99,37 @@ $("input[name='app_contacttype[knowledge]']").click(function () {
     }
 });
 
-$('#app_movie_filter_actors').multiselect(
-    {
-        buttonWidth: '200px',
-        disableIfEmpty: true,
-        disabledText: 'aucune valeur ...',
-        buttonText: function(options, select) {
-            if (options.length === 0) {
-                return 'Tous les acteurs';
-            }
-            else if (options.length > 3) {
-                return 'Plus de 3 sélectionnés';
-            }
-            else {
-                var labels = [];
-                options.each(function() {
-                    if ($(this).attr('label') !== undefined) {
-                        labels.push($(this).attr('label'));
-                    }
-                    else {
-                        labels.push($(this).html());
-                    }
-                });
-                return labels.join(', ') + '';
-            }
-        }
-    }
-);
-$('#app_movie_filter_hashTags').multiselect(
-    {
-        buttonWidth: '200px',
-        disableIfEmpty: true,
-        disabledText: 'aucune valeur ...',
-        buttonText: function(options, select) {
-            if (options.length === 0) {
-                return 'Tous les hashtags';
-            }
-            else if (options.length > 3) {
-                return 'Plus de 3 sélectionnés';
-            }
-            else {
-                var labels = [];
-                options.each(function() {
-                    if ($(this).attr('label') !== undefined) {
-                        labels.push($(this).attr('label'));
-                    }
-                    else {
-                        labels.push($(this).html());
-                    }
-                });
-                return labels.join(', ') + '';
+
+function multiSelect(dom, emptyLabel, moreThanLabel) {
+    $(dom).multiselect(
+        {
+            buttonWidth: '200px',
+            disableIfEmpty: true,
+            disabledText: 'aucune valeur ...',
+            buttonText: function(options, select) {
+                if (options.length === 0) {
+                    return emptyLabel;
+                }
+                else if (options.length > 3) {
+                    return moreThanLabel;
+                }
+                else {
+                    var labels = [];
+                    options.each(function() {
+                        if ($(this).attr('label') !== undefined) {
+                            labels.push($(this).attr('label'));
+                        }
+                        else {
+                            labels.push($(this).html());
+                        }
+                    });
+                    return labels.join(', ') + '';
+                }
             }
         }
-    }
-);
+    );
+}
+
+multiSelect('#app_movie_filter_actors', 'Tous les acteurs', 'Plus de 3 sélectionnés');
+multiSelect('#app_movie_actors', 'Tous les acteurs', 'Plus de 3 sélectionnés');
+multiSelect('#app_movie_filter_hashTags', 'Tous les hashtags', 'Plus de 3 sélectionnés');

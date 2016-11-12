@@ -20,7 +20,6 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Genemu\Bundle\FormBundle\GenemuFormBundle(),
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
 
             new AppBundle\AppBundle(),

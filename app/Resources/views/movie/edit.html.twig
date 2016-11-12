@@ -4,14 +4,13 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    {% from "macros/form.html.twig" import stylesheetspush %}
-    {{ stylesheetspush(form) }}
+    <link href="{{ asset('bundles/jpsymfonycore/select2/css/select2.min.css') }}" rel="stylesheet" />
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
-    {% from "macros/form.html.twig" import javascriptspush %}
-    {{ javascriptspush(form) }}
+    <script src="{{ asset('bundles/jpsymfonycore/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('bundles/jpsymfonycore/select2/js/select2.full.min.js') }}"></script>
 {% endblock %}
 
 {% block active_movies %}active{% endblock %}

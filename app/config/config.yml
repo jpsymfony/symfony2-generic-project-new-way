@@ -111,15 +111,6 @@ stof_doctrine_extensions:
             timestampable: true
             sluggable: true
 
-genemu_form:
-    select2:
-        enabled: true
-        configs:
-            placeholder: Select a value
-            width: '100%'
-            allowClear: false
-            minimumInputLength: 0
-
 avalanche_imagine:
     filters:
         movie_thumbnail:
