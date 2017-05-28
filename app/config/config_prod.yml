@@ -57,7 +57,7 @@ monolog:
             handler:        swift_critical
         swift_critical:
             type:           swift_mailer
-            from_email:     contact@alterway.com
+            from_email:     contact@mywebsite.com
             to_email:       jpsymfony@free.fr
             subject:        Une erreur critique est survenue !
             level:          info
@@ -73,10 +73,10 @@ app:
    payment_organisms:
        default: Be2bill
        Be2bill:
-           identifier: ALTERWAY
+           identifier: MYWEBSITE
            password: 987654321
            url: https://secure-magenta1.be2bill.com/front/form/process.php
        Paypal:
-           identifier: alterway@alterway.com
+           identifier: me@mywebsite.com
            password: ~
            url: http://www.paypal.com/cgi-bin/webscr
