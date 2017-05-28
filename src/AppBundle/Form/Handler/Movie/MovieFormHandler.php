@@ -142,6 +142,15 @@ class MovieFormHandler
     {
         $attributes = $request->attributes->all();
 
+        // really dirty but it will be removed with the datepicker
+        if (!empty($attributes['releaseDateFrom']) && is_array($attributes['releaseDateFrom'])) {
+            $attributes['releaseDateFrom'] = new \DateTime($attributes['releaseDateFrom']['year'] . '-' . $attributes['releaseDateFrom']['month'] . '-' . $attributes['releaseDateFrom']['day']);
+        }
+        if (!empty($attributes['releaseDateTo']) && is_array($attributes['releaseDateTo'])) {
+            $attributes['releaseDateTo'] = new \DateTime($attributes['releaseDateTo']['year'] . '-' . $attributes['releaseDateTo']['month'] . '-' . $attributes['releaseDateTo']['day']);
+        }
+        // end block to remove
+
         foreach ($attributes as $key => $val) {
             if (!empty($val)) {
                 // title, description, releaseDateFrom, releaseDateTo
@@ -154,7 +163,7 @@ class MovieFormHandler
                 if (in_array($key, Movie::getCollectionFields())) {
                     $normalizedKey = Movie::getManagerName($key);
                     $objectManager = $this->managerService->getManagerClass($normalizedKey . 'Manager');
-                    foreach($val as $keyCollection => $valCollection) {
+                    foreach ($val as $keyCollection => $valCollection) {
                         $attributes[$key][$keyCollection] = $objectManager->find($valCollection);
                     }
                     $form->get($key)->setData($attributes[$key]);

@@ -4,6 +4,7 @@ namespace AppBundle\Form\Type;
 
 use Jpsymfony\CoreBundle\Form\DataTransformer\TextToDateTimeDataTransformer;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -19,17 +20,7 @@ class ActorType extends AbstractType
         ->add('id', HiddenType::class)
         ->add('firstName', TextType::class, array('label' => 'acteur.nom'))
         ->add('lastName', TextType::class, array('label' => 'acteur.prenom'))
-//        ->add('birthday', 'birthday', array('label' => 'acteur.dateNaissance'))
-        ->add(
-            $builder->create(
-                'birthday', TextType::class,
-                array(
-                    'attr' => array('class' => 'datepicker', 'readonly' => true),
-                    'label' => 'acteur.dateNaissance',
-                )
-            )
-                ->addModelTransformer(new TextToDateTimeDataTransformer())
-        )
+        ->add('birthday', BirthdayType::class, array('label' => 'acteur.dateNaissance'))
         ->add('sex', ChoiceType::class, array(
             'choices' => array('Féminin'=>'F', 'Masculin'=>'M'),
             'choices_as_values' => true,
